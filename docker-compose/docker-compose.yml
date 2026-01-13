@@ -1,0 +1,18 @@
+version: '3'
+#docker container run -v $(pwd):/usr/share/nginx/html --publish 8080:80 nginx
+#key: value
+services:
+#key bên trong là 2 service
+  nginx:
+    image: nginx
+    # 1 list: volumes, ports
+    volumes:
+      - .:/usr/share/nginx/html
+    ports:
+      - '8080:80'
+  
+  nginx2:
+    image: nginx
+    ports:
+      - '8081:80'
+

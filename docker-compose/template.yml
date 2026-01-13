@@ -1,0 +1,19 @@
+version: '3.1'  # Khuyen nghi su dung 3.x tro len
+
+services:  # Dinh nghia cac Container
+  servicename: # Ten cua container. Day cung la DNS name
+    image: # Ten image hoac option de build image
+    command: # Optional. Command nay se override CMD trong image Dockerfile
+    environment: # Bien moi truong, giong option -e
+    volumes: # Volume, giong option -v
+    ports: # Expose port NAT
+  
+  servicename2:
+
+
+volumes: # Tao object volume, giống docker volume create
+
+networks: # Tao object network, giống docker network create
+
+
+
