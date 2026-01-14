@@ -1,0 +1,15 @@
+
+services:
+  proxy:
+    # build the nginx proxy from a custom Dockerfile
+    build:
+      #folder để tìm thấy Dockerfile
+      context: .
+      dockerfile: nginx.Dockerfile
+    image: nginxproxy #tên image sau khi build xong
+    ports:
+      - '80:80'
+  web:
+    image: httpd
+    volumes:
+      - ./html:/usr/local/apache2/htdocs/
